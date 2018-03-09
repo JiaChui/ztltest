@@ -12,8 +12,8 @@ class B85_ZK_3693Test extends ZTL4ScalaTestCase {
 
       scrollDownAndClick("$lb", "$gr");
 
-      verScroll(jq("$lb_m"), 0.5)
-      verScroll(jq("$gr_m"), 0.5)
+      verScroll(jq("$lb_m"), .5)
+      verScroll(jq("$gr_m"), .5)
 
       waitResponse(true)
 
@@ -33,8 +33,8 @@ class B85_ZK_3693Test extends ZTL4ScalaTestCase {
     val listbox = jq(listboxSelector)
     val grid = jq(gridSelector)
 
-    verScroll(listbox, 1.0)
-    verScroll(grid, 1.0)
+    verScroll(listbox, 1)
+    verScroll(grid, 1)
 
     val listitems = jq(listboxSelector + " .z-listitem")
     val lastlistitem = listitems.eq(listitems.length() - 1)
